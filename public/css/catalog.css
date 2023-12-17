@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding-top: 80px; /* Adjust this value to move the item list down */
+}
+
+.item-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between items */
+    justify-content: space-around; /* Adjust the alignment as needed */
+}
+
+.item {
+    width: 200px; /* Adjust the width of each item */
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer; /* Add cursor style to indicate interactivity */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+    color: #000; /* Set text color to black */
+    background-color: #fff; /* Set background color to white */
+    text-align: center; /* Center align text */
+}
+
+.item:hover {
+    background-color: #fff; /* White box background on mouseover */
+    border-color: #007bff; /* Blue border on mouseover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.item.selected {
+    background-color: #007bff; /* Blue background for the selected item */
+    color: #fff; /* White text for better visibility on blue */
+}
+
+.item img {
+    width: 100%; /* Make the image fill the container */
+    height: 150px; /* Set a fixed height or adjust as needed */
+    object-fit: contain; /* Adjust as needed (cover, contain, etc.) */
+    margin-bottom: 10px; /* Add some space below the image */
+}
