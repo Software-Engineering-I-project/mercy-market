@@ -51,13 +51,9 @@ section {
     color: #fff;
     display: inline-block;
     padding: 0.5rem 3rem;
-    /*aligns the background for the text "features"
-    /*the clip path takes effect on the "feature" text design, making it look like a bow*/
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-/*this section from  video 9*/
-/*this is a button for the checkout text*/
 .btn {
     border: 0.2rem solid var(--black);
     margin-top: 1rem;
@@ -70,7 +66,7 @@ section {
     background: none;
 }
 
-/*this one is to add an effect when curson is on top of the button (video 9)*/
+/*this one is to add an effect when curson is on top of the button*/
 .btn:hover {
     background: var(--green);
     color: #fff;
@@ -78,13 +74,11 @@ section {
 
 .header {
     border: 0pc solid;
-    /*this is the thickness of the border (black)*/
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    /*this "z-index" fixes the glitch that makes the "our products " title get mixed with header/navbar*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,14 +88,20 @@ section {
 }
 
 .header .logo {
-    font-size: 2, 5rem;
+    font-size: 2rem;
     font-weight: bolder;
+}
+
+.header .logo i {
+    color: var(--green);
 }
 
 .header .navbar {
     font-size: 1.7rem;
     margin: 0 1rem;
     color: var(--black);
+    display: flex;
+    gap: 15px;
 }
 
 .header .navbar a:hover {
@@ -110,7 +110,7 @@ section {
 }
 
 .header .icons div {
-    /*this part is the border and calibration of search, user, cart, bar icons*/
+    /*this part is the border and calibration of search, user,  bar icons*/
     border: 1px solid;
     height: 4.5rem;
     width: 4.5rem;
@@ -127,7 +127,7 @@ section {
     color: white;
 }
 
-/*this remove the menu button (video 12)*/
+/*this remove the menu button */
 
 #menu-button {
     display: none;
@@ -204,58 +204,6 @@ section {
     transition: 0.4s linear;
 }
 
-.header .shopping-cart.box {
-    border: 1px solid blue;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
-    margin: 1rem 0;
-}
-
-.header .shopping-cart .box img {
-    height: 10rem;
-}
-
-.header .shopping-cart .box .fa-trash {
-    font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    cursor: pointer;
-    color: var(--light-color);
-    transform: translate(-50%);
-}
-
-.header .shopping-cart .box .fa-trash:hover h3 {
-    color: var(--green);
-}
-
-.header .shopping-cart .box .content span {
-    /*this takes effect on the shopping cart section on "content" index.html*/
-
-    color: var(--light-color);
-    font-size: 1.6rem;
-}
-
-.header .shopping-cart .box .content .quatity {
-    padding-left: 1rem;
-}
-
-.header .shopping-cart .total {
-    font-size: 2.5rem;
-    padding: 1rem 0;
-    text-align: center;
-    color: var(--black);
-}
-
-/* this modifies the button size for checkout   (video 9)*/
-.header .shopping-cart .btn {
-    display: block;
-    text-align: center;
-    margin: 1rem 0;
-}
-
 .header .login-form {
     border: 1px solid;
     position: absolute;
@@ -283,8 +231,6 @@ section {
 }
 
 .header .login-form .box {
-    /*this is a box that encapsulates login portion*/
-
     width: 100%;
     border: 0px solid;
     margin: 0.7rem 0;
@@ -303,8 +249,6 @@ section {
 }
 
 .header .login-form p a {
-    /*changes the color for "click here" or "create here"*/
-
     color: var(--green);
     text-decoration: underline;
 }
@@ -446,16 +390,16 @@ section {
     padding: 0.5rem 0;
 }
 
-/*categories section*/
+/*catalog section*/
 
-.categories .box-container {
+.catalog .box-container {
     border: 0px solid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     gap: 1.5rem;
 }
 
-.categories .box-container .box {
+.catalog .box-container .box {
     padding: 3rem 0;
     background: #fff;
     border-radius: 0.5rem;
@@ -465,22 +409,22 @@ section {
     text-align: center;
 }
 
-.categories .box-container .box:hover {
+.catalog .box-container .box:hover {
     box-shadow: 1px 1px 10px 4px var(--green);
 }
 
-.categories .box-container .box img {
+.catalog .box-container .box img {
     margin: 1rem 0;
     height: 15rem;
 }
 
-.categories .box-container .box h3 {
+.catalog .box-container .box h3 {
     font-size: 2rem;
     color: var(--black);
     line-height: 1.8;
 }
 
-.categories .box-container .box p {
+.catalog .box-container .box p {
     font-size: 1.7rem;
     color: var(--light-color);
     line-height: 1.8;
@@ -489,12 +433,12 @@ section {
 
 /*reviews section*/
 
-.review .review-slider {
+.reviews .review-slider {
     border: 0px solid;
     padding: 1rem;
 }
 
-.review .review-slider .box {
+.reviews .review-slider .box {
     border: 0px solid red;
     background: #fff;
     border-radius: 0.5rem;
@@ -506,95 +450,32 @@ section {
     transition: 0.2s linear;
 }
 
-.review .review-slider .box:hover {
+.reviews .review-slider .box:hover {
     box-shadow: 1px 1px 10px 4px var(--green);
 }
 
-.review .review-slider .box img {
+.reviews .review-slider .box img {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
 }
 
-.review .review-slider .box p {
+.reviews .review-slider .box p {
     padding: 1ren 0;
     line-height: 1.8;
     color: var(--light-color);
     font-size: 1.5rem;
 }
 
-.review .review-slider .box h3 {
+.reviews .review-slider .box h3 {
     padding: 1rem 0;
     color: var(--black);
     font-size: 2.2rem;
 }
 
-.review .review-slider .box .stars i {
+.reviews .review-slider .box .stars i {
     color: orange;
     font-size: 1.7rem;
-}
-
-/*blog*/
-
-.blogs .box-container {
-    border: 0px solid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-    gap: 1.5rem;
-}
-
-.blogs .box-container .box {
-    overflow: hidden;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
-    background: #fff;
-}
-
-.blogs .box-container .box img {
-    height: 25rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.blogs .box-container .box .content {
-    padding: 2rem;
-}
-
-.blogs .box-container .box .content .icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1rem;
-    border-bottom: var(--border);
-}
-
-.blogs .box-container .box .content .icons a {
-    color: var(--light-color);
-    font-size: 1.5rem;
-}
-
-.blogs .box-container .box .content .icons a:hover {
-    color: var(--black);
-}
-
-.blogs .box-container .box .content .icons a i {
-    color: rgb(3, 71, 173);
-    padding-right: 0.5rem;
-}
-
-.blogs .box-container .box .content h3 {
-    line-height: 1.8;
-    color: var(--black);
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
-}
-
-.blogs .box-container .box .content p {
-    line-height: 1.8rem;
-    color: var(--light-color);
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
 }
 
 /*footer*/
@@ -706,10 +587,8 @@ section {
     }
 }
 
-/*this code adds a box to the header menu depending on screen size*/
 @media (max-width: 768px) {
     #menu-btn {
-        /*this function makes the menu button appear when screen size resolution is met*/
         display: inline-block;
     }
 
@@ -747,14 +626,15 @@ section {
         text-align: center;
     }
 }
-
-.logo:visited {
-    color: #0000ee !important;
-}
-.logo:hover {
-    color: var(--green);
-}
-.large {
-    color: #0000ee !important;
-    font-size: 20px;
+.learn-more-button {
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    color: var(--black);
+    border: 0.2rem solid var(--black);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }

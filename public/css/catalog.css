@@ -14,16 +14,17 @@ main {
     justify-content: space-around; /* Adjust the alignment as needed */
 }
 
-.item {
-    width: 200px; /* Adjust the width of each item */
-    border: 1px solid #ddd; /* Add a border for better visibility */
+.item-list-container .item {
+    display: block;
+    width: 200px;
+    border: 1px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
-    cursor: pointer; /* Add cursor style to indicate interactivity */
-    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
-    color: #000; /* Set text color to black */
-    background-color: #fff; /* Set background color to white */
-    text-align: center; /* Center align text */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
 }
 
 .item:hover {
@@ -42,4 +43,8 @@ main {
     height: 150px; /* Set a fixed height or adjust as needed */
     object-fit: contain; /* Adjust as needed (cover, contain, etc.) */
     margin-bottom: 10px; /* Add some space below the image */
+}
+
+.item button {
+    background-color: #fff;
 }

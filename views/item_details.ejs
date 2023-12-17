@@ -32,14 +32,51 @@
 
     <!--header section-->
     <header class="header">
-        <a href="#" class="logo"> <i class="fa-solid fa-"></i>The SUPER Market </a>
+        
+
+        <form action="/index" method="get" class="logo">
+            <button type="submit" style="font: inherit; background-color: inherit;">
+                <i class="fa-solid fa-"></i>The SUPER Market
+            </button>
+        </form>
+        
 
         <nav class="navbar">
-            <a href="#home"> home</a>
-            <a href="#features"> Featured</a>
-            <a href="#products"> Most Popular</a>
-            <a href="#catalog"> Catalog</a>
-            <a href="#reviews"> reviews</a>
+            <form action="/index" method="get" class="navigation-form">
+                <input type="hidden" name="fragment" value="home">
+                <button type="submit" style="font: inherit; background-color: inherit;" class="navigation-button">
+                    Home
+                </button>
+            </form>
+
+            <form action="/index" method="get" class="navigation-form">
+                <input type="hidden" name="fragment" value="features">
+                <button type="submit" style="font: inherit; background-color: inherit;" class="navigation-button">
+                    Featured
+                </button>
+            </form>
+
+            <form action="/index" method="get" class="navigation-form">
+                <input type="hidden" name="fragment" value="products">
+                <button type="submit" style="font: inherit; background-color: inherit;" class="navigation-button">
+                    Most Popular
+                </button>
+            </form>
+
+            <form action="/index" method="get" class="navigation-form">
+                <input type="hidden" name="fragment" value="catalog">
+                <button type="submit" style="font: inherit; background-color: inherit;" class="navigation-button">
+                    Catalog
+                </button>
+            </form>
+
+            <form action="/index" method="get" class="navigation-form">
+                <input type="hidden" name="fragment" value="reviews">
+                <button type="submit" style="font: inherit; background-color: inherit;" class="navigation-button">
+                    Reviews
+                </button>
+            </form>
+
         </nav>
 
         <!--icons for the top banner (bar,search,user,cart)-->
@@ -162,14 +199,27 @@
     <!-- Item Details Section -->
     <section class="item-details" id="item-details">
         <!-- Replace the following content with dynamic data based on the selected item -->
+        <% if (product) { %>
+        <% const image_link = product.name.replace(/ /g, "_").toLowerCase(); %>
+        <img src="../image/<%=image_link%>.png" alt="<%= product.name %>">
+        <div class="item-info">
+            <h1><%= product.name %></h1>
+            <p><strong>Price:</strong> <%= product.price %></p>
+            <p><strong>Section:</strong> <%= product.department %></p>
+            <p><strong>SKU:</strong> <%= product.sku %></p>
+            <p><strong>Availability:</strong> <%= product.status %></p>
+            <p><strong>Quantity in Case:</strong> <%= product.items_in_case %></p>
+        </div>
+        <% } else { %>
         <img src="image/black_beans.png" alt="Item Image">
         <div class="item-info">
-            <h1>Item Name</h1>
-            <p><strong>Price:</strong> $19.99</p>
-            <p><strong>Section:</strong> Grocery</p>
-            <p><strong>SKU:</strong> SKU123</p>
-            <p><strong>Availability:</strong> In Stock</p>
-            <p><strong>Quantity in Case:</strong> 12</p>
+            <h1>Item Not Found</h1>
+            <p><strong>Price:</strong> $00.00</p>
+            <p><strong>Section:</strong> Not Found</p>
+            <p><strong>SKU:</strong> NO_SKU</p>
+            <p><strong>Availability:</strong> N/A</p>
+            <p><strong>Quantity in Case:</strong> N/A</p>
+        <% } %>
         </div>
     </section>
 
@@ -245,15 +295,32 @@
                 <a href="https://www.google.com/maps/dir/41.0420982,-73.8536679/mercy+university+location/@41.0328222,-73.8837974,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c2eb6469fc1d83:0xe7f214ded234828d!2m2!1d-73.8734969!2d41.0222482?entry=ttu" target= "_blank" class="links"> <i class="fa fa-map-marker"></i>Dobbs Ferry, NY</a>
             </div>
             <div class="box">
-                <h3> quick links </h3>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Home</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Features</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Products</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Categories</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Review</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Blogs</a>
-            </div>
+                <h3>quick links</h3>
+                <form action="/index" method="get" class="links">
+                    <input type="hidden" name="fragment" value="home" />
+                    <button type="submit" style="font: inherit; background-color: inherit; color: inherit" class="navigation-button"><i class="fa fa-arrow-right"></i>Home</button>
+                </form>
 
+                <form action="/index" method="get" class="links">
+                    <input type="hidden" name="fragment" value="features" />
+                    <button type="submit" style="font: inherit; background-color: inherit; color: inherit" class="navigation-button"><i class="fa fa-arrow-right"></i>Featured</button>
+                </form>
+
+                <form action="/index" method="get" class="links">
+                    <input type="hidden" name="fragment" value="products" />
+                    <button type="submit" style="font: inherit; background-color: inherit; color: inherit" class="navigation-button"><i class="fa fa-arrow-right"></i>Most Popular</button>
+                </form>
+
+                <form action="/index" method="get" class="links">
+                    <input type="hidden" name="fragment" value="catalog" />
+                    <button type="submit" style="font: inherit; background-color: inherit; color: inherit" class="navigation-button"><i class="fa fa-arrow-right"></i>Catalog</button>
+                </form>
+
+                <form action="/index" method="get" class="links">
+                    <input type="hidden" name="fragment" value="reviews" />
+                    <button type="submit" style="font: inherit; background-color: inherit; color: inherit" class="navigation-button"><i class="fa fa-arrow-right"></i>Reviews</button>
+                </form>
+            </div>
 
             <div class="box">
                 <h3> Newsletter </h3>

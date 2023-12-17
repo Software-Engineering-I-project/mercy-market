@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>The SUPER Market</title>
 
-
-    <!--this is to add a small icon for the tab. its called the favicon-->
     <link rel="icon" type="image/icon" href="image/favicon.png">
-
 
     <!--code for font awesemoe cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--code for font awesemoe cdn-->
-
+ 
     <!--code for css file-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--code for css file-->
 
     <!--this link here connects to a stile called swiperjs.com which adds slider feature to the "our products" section-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -32,17 +26,17 @@
 
     <!--header section-->
     <header class="header">
-        <a href="#" class="logo"> <i class="fa-solid fa-"></i>The SUPER Market </a>
+        <a href="#" class="logo"> <i class="fa-solid fa-store"></i>The SUPER Market </a>
 
         <nav class="navbar">
-            <a href="#home"> home</a>
-            <a href="#features"> Featured</a>
-            <a href="#products"> Most Popular</a>
-            <a href="#catalog"> Catalog</a>
-            <a href="#reviews"> reviews</a>
+            <a href="#home" style="color: #000"> home</a>
+            <a href="#features" style="color: #000"> Featured</a>
+            <a href="#products" style="color: #000"> Most Popular</a>
+            <a href="#catalog" style="color: #000"> Catalog</a>
+            <a href="#reviews" style="color: #000"> reviews</a>
         </nav>
 
-        <!--icons for the top banner (bar,search,user,cart)-->
+        <!--icons for the top banner (bar,search,user)-->
         <div class="icons">
             <div class="fa fa-bars" id="menu-btn"></div>
             <div class="fa fa-search" id="search-btn"></div>
@@ -90,7 +84,7 @@
         </div>
 
         <form action="#" class="login-form">
-            <h3>login now</h3> <!--video 10. this makes the "login" button-->
+            <h3>login now</h3> 
             <input type="email" placeholder="enter your email" class="box">
             <input type="password" placeholder="enter your password" class="box">
 
@@ -99,17 +93,7 @@
 
             <input type="submit" value="Login Now" class="btn">
         </form>
-
-
-
-
     </header>
-    <!--header section-->
-
-
-    <!--banner section-->
-
-
 
     <section class="home" id="home">
 
@@ -124,12 +108,6 @@
         </div>
     </section>
 
-    <!--banner section-->
-
-
-    <!-- our features section-->
-    <!-- video 14 -->
-
     <section class="features" id="features">
         <h1 class="heading"><span>Our Featured</span> </h1>
 
@@ -142,7 +120,7 @@
             </div>
 
             <div class="box">
-                <img src="image/delivery.jpg">
+                <img src="image/deliveryservice.png">
                 <h3>Delivery</h3>
                 <p>We deliver right to your house for your convenience!</p>
                 <a href="delivery.html" class="learn-more-button">Learn More</a>
@@ -181,17 +159,13 @@
 
         </div>
     </section>
-    <!--our features section-->
-
-
-    <!--our products section-->
-
+    
     <section class="products" id="products">
         <h1 class="heading"><span>Most Popular</span></h1>
 
         <div class="swiper product-slider">
 
-            <div class="swiper-wrapper" data-product-id="1"> <!--datap-product-id="1"-->
+            <div class="swiper-wrapper" data-product-id="1"> 
                 <div class="swiper-slide box">
                     <img src="image/popcorn.png">
                     <h1>Skinny Popcorn</h1>
@@ -276,12 +250,9 @@
                     <a href="" class="btn">Read More</a>
                 </div>
             </div>
-        </div><!--looks like the background design was brought over here automatically aswell-->
+        </div>
     </section>
-    <!--our products section-->
-
-
-    <!---product categories-->
+    
 
     <section class="catalog" id="catalog">
         <h1 class="heading"><span>Product Catalog</span></h1>
@@ -295,8 +266,6 @@
             </div>
         </div>
     </section>
-
-    <!--product categories-->
 
     <!--review section-->
 
@@ -375,12 +344,7 @@
         </div>
     </section>
 
-
-    <!--review section-->
-
     <!--footer section-->
-
-
     <section class="footer">
         <div class="box-container">
             <div class="box">
@@ -394,18 +358,17 @@
             </div>
             <div class="box">
                 <h3> contact info </h3>
-                <a href="#" class="links"> <i class="fa fa-phone"></i>+1 555-555-6455</a>
+                <a href="tel:+15555556455" class="links"> <i class="fa fa-phone"></i>+1 555-555-6455</a>
                 <a href="mailto: TheSUPERMarket" class="links"> <i class="fa fa-envelope"></i>TheSUPERMarket.com</a>
                 <a href="https://www.google.com/maps/dir/41.0420982,-73.8536679/mercy+university+location/@41.0328222,-73.8837974,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c2eb6469fc1d83:0xe7f214ded234828d!2m2!1d-73.8734969!2d41.0222482?entry=ttu" target= "_blank" class="links"> <i class="fa fa-map-marker"></i>Dobbs Ferry, NY</a>
             </div>
             <div class="box">
                 <h3> quick links </h3>
                 <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Home</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Features</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Products</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Categories</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Review</a>
-                <a href="#" class="links"> <i class="fa fa-arrow-right"></i>Blogs</a>
+                <a href="#features" class="links"> <i class="fa fa-arrow-right"></i>Featured</a>
+                <a href="#products" class="links"> <i class="fa fa-arrow-right"></i>Most Popular</a>
+                <a href="#catalog" class="links"> <i class="fa fa-arrow-right"></i>Catalog</a>
+                <a href="#reviews" class="links"> <i class="fa fa-arrow-right"></i>Reviews</a>
             </div>
 
 
